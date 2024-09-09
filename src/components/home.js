@@ -13,7 +13,7 @@ export class Home extends Component {
         const products = [
             { name: "Fresh Tomatoes", price: 2.99, image: "https://page-images.websim.ai/Fresh%20Tomatoes_1024x1024xuUgFhAQZ2w5kyjAX3xd665d8e0bdef.jpg" },
             { name: "Organic Apples", price: 3.49, image: "https://page-images.websim.ai/Organic%20Apples_1024x1024xuUgFhAQZ2w5kyjAX3x2763d6145d27c.jpg" },
-            { name: "Farm Eggs", price: 4.99, image: "https://replicate.delivery/yhqm/SH9QpZBx6fxXNqVGadJ45ZqGx7zs1eZHz6d5YFtOAy9cSnZTA/out-0.webp" },
+            { name: "Farm Eggs", price: 4.99, image: "https://images.unsplash.com/photo-1607690424395-6660d838d818?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
             { name: "Leafy Spinach", price: 2.49, image: "https://page-images.websim.ai/Leafy%20Spinach_1024x1024xuUgFhAQZ2w5kyjAX3xd2b73d9c5a45f.jpg" },
             { name: "Juicy Oranges", price: 3.99, image: "https://page-images.websim.ai/Juicy%20Oranges_1024x1024xuUgFhAQZ2w5kyjAX3x2faf47ea8fee8.jpg" },
             { name: "Fresh Milk", price: 3.79, image: "https://page-images.websim.ai/Fresh%20Milk_1024x1024xuUgFhAQZ2w5kyjAX3x66e18fc3c99bd.jpg" },
@@ -72,62 +72,89 @@ export class Home extends Component {
         //     gsap.from(card, {
         //         opacity: 0,
         //         y: 50,
-        //         duration: 0.5,
+        //         duration: 1,
         //         ease: "power2.out",
         //         scrollTrigger: {
         //             trigger: card,
         //             start: "top bottom-=100",
         //             toggleActions: "play none none reverse"
         //         }
-        //     });
-        // });
-    }
+            // });
+        // }); 
+       }
 
     render() {
         return (
             <div>
                 <div className="app-container">
-                    <header className="header">
-                        <div className="logo">FarmFresh Direct</div>
-                    </header>
 
                         <div className="search-bar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
+                                <circle cx="11" cy="11" r="8" ></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                             <input type="text" placeholder="Search for fresh produce..." />
                         </div>
+                        {/* <div id="all">
                     <div className="parallax-container">
-                        <div className="parallax-bg"></div>
-                        <div className="parallax-content">
-                            <h1 className="parallax-title">Farm to Table</h1>
-                            <p className="parallax-subtitle">Directly from local farmers to your doorstep</p>
-                        </div>
-                        <div className="image-container">
+                    <div className="parallax-bg"></div>
+                    <div className="parallax-content">
+                    <h1 className="parallax-title">Farm to Table</h1>
+                    <p className="parallax-subtitle">Directly from local farmers to your doorstep</p>
+                    </div>
+                    </div>
+                    
+                    
+                    
+                    </div>                         */}
+                    <header className="header">
+                    <div className="image-container">
                                                     <img src={Pic} alt="Farm Fresh" className="glowing-image" />
                                                 </div>
                                                 <style jsx>{`
                                                     .image-container {
                                                         display: flex;
-                                                        justify-content: center;
+                                                        justify-content: space-around;
                                                         margin: 20px 0;
                                                     }
                                                     .glowing-image {
                                                         max-width: 100%;
                                                         height: auto;
                                                         filter: drop-shadow(0 0 10px white);
-                                                    }
-                                                `}</style>
+                                                        }
+                                                        `}</style>
+                        <div className="logo">FarmFresh Direct...</div>
+                    </header>
+                                                        <div className="categories">
+                                                            <div className="category">Vegetables</div>
+                                                            <div className="category">Fruits</div>
+                                                            <div className="category">Dairy</div>
+                                                            <div className="category">Herbs</div>
+                                                            <div className="category">Organic</div>
+                                                        </div>
+                    
+                    <div className="mapouter">
+                        <div className="gmap_canvas">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=ipec&t=k&z=13&ie=UTF8&iwloc=&output=embed" 
+                                frameBorder="0" 
+                                scrolling="no" 
+                                style={{ width: '430px', height: '290px' }}
+                                title="Google Map"
+                            >
+                            </iframe>
+                        </div>
+                        
                     </div>
-
-                    <div className="categories">
-                        <div className="category">Vegetables</div>
-                        <div className="category">Fruits</div>
-                        <div className="category">Dairy</div>
-                        <div className="category">Herbs</div>
-                        <div className="category">Organic</div>
-                    </div>
+                    <div className="search-bar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" placeholder="Search your Location..." /> 
+                        </div>
+                            
+                        <div id="gap"></div>
 
                     <div className="products">
                     </div>

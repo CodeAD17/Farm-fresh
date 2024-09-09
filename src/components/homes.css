@@ -39,7 +39,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.396);
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.396); */
 }
 .search-bar {
     display: flex;
@@ -59,12 +59,13 @@ body {
     color: var(--text-color);
     outline: none;
 }
-
+#gap{
+    margin-bottom: 20px;
+}
 .categories {
     display: flex;
     overflow-x: auto;
-    padding: 10px 0;
-    margin-bottom: 20px;
+    padding: 5px 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -82,8 +83,10 @@ body {
     margin-right: 10px;
     white-space: nowrap;
     cursor: pointer;
+    margin-bottom: 0;
     transition: all 0.3s ease;
 }
+
 
 .category:hover {
     background: var(--primary-color);
@@ -92,7 +95,7 @@ body {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -101,6 +104,8 @@ body {
     backdrop-filter: blur(10px);
     border: var(--glass-border);
     border-radius: 15px;
+    margin-top: 0;
+    padding-top: 0;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -143,13 +148,16 @@ body {
     background: #45a049;
 }
 
+
 .parallax-container {
     height: 200px;
     overflow: hidden;
     position: relative;
     margin-bottom: 20px;
     display: flex;
+    
 }
+
 
 .parallax-bg {
     background-image: url('https://source.unsplash.com/1600x900/?dark,farm,vegetables');
@@ -191,3 +199,20 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+.mapouter1{
+    display: flex;
+}
+.gmap_canvas iframe{position:relative !important;z-index:2 !important;}
+.gmap_canvas a{color:#fff !important;position:absolute !important;top:0 !important;left:0 !important;z-index:0 !important;}
+.mapouter{display:table;}
+.gmap_canvas{overflow:hidden;
+    position:relative;
+    height:200px;
+    width:86vw;
+    background:#ffffff44;
+margin-top: 20px;
+margin-bottom: 15px;
+border: 2px solid rgba(255, 255, 255, 0.181);
+display: flex;
+justify-content: center;
+align-items: center;}
