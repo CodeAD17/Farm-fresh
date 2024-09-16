@@ -56,7 +56,7 @@ export class Home extends Component {
             searchLocation: searchValue,
             showMap: searchValue.trim() !== ''
         });
-    }
+}
 
     render() {
         return (
